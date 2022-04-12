@@ -91,13 +91,33 @@ export default function QuoteCard() {
                             color="textSecondary"
                             component="p"
                             className={classes.content}>
-                                {quote.content}
-                            </Typography>
-                            <Typography className={classes.author} color="textSecondary"
+                            {quote.content}
+                        </Typography>
+                        <Typography className={classes.author} color="textSecondary"> - {quote.author}
+                        </Typography>
                     </div>
-                )
-            }
+                ) : (
+                    <p className={classes.errorMessage}>{errorMessage}</p>
+                )}
             </CardContent>
+
+            <CardActions disableSpacing className={classes.footer}>
+                <div>
+                    {quoteCopied ? (
+                        <p classname={classes.quoteCopiedMessage}>
+                            Quote copied to clipboard
+                        </p>
+                    ) : (<IconButton aria-label="copy-icon" onClick={copyQuote}>
+                        <FileCopyIcon />
+                    </IconButton>
+                    )}
+                </div>
+                <div>
+                    <IconButton aria-label="copy-icon" onClick={fetchRandomQuote}>
+                        <RefreshIcon />
+                    </IconButton>
+                </div>
+            </CardActions>
         </Card>
-    )
+    );
 }
