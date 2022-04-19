@@ -34,7 +34,7 @@ export default function NestedGrid() {
     justify="center"
     className={classes.root}
     >
-      <h2 className={classes.heading}Quotes Galore></h2>
+      <h2 className={classes.heading}Random Quote Generator></h2>
   )
   <Grid item md={8} sm={8} xs={10}>
     <Card />
@@ -45,7 +45,7 @@ export default function NestedGrid() {
 
 function App() {
   return (
-    <div className="Quotes-Galore">
+    <div className="RandomQuoteGenerator">
       <header className="Click-Here-For-Wisdom">
         <img src={logo} className="Quotes-Galore-logo" alt="logo" />
         <p>

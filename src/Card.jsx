@@ -120,4 +120,4 @@ export default function QuoteCard() {
             </CardActions>
         </Card>
     );
-}
+}  
